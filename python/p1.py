@@ -6,8 +6,9 @@ def multiple_sum(limit, multiples):
     for i in xrange(limit):
         for j in multiples:
             if i % j == 0:
+                print i
                 sums += i
-                continue
+                break
     return sums
 
 if __name__ == '__main__':
