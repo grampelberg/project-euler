@@ -1,15 +1,10 @@
 # Solution for Project Euler problem 1
 # http://projecteuler.net/index.php?section=problems&id=1
 
-def multiple_sum(limit, multiples):
-    sums = 0
-    for i in xrange(limit):
-        for j in multiples:
-            if i % j == 0:
-                print i
-                sums += i
-                break
-    return sums
+def mod(x, factors):
+    for j in factors:
+        if x % j == 0:
+            return True
 
 if __name__ == '__main__':
-    print multiple_sum(1000, [3, 5])
+    print sum([x for x in xrange(1000) if mod(x, [3, 5])])
